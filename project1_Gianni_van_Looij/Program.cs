@@ -21,8 +21,8 @@ static void Opdracht1()
     Console.WriteLine(Environment.NewLine + "geachte heer/mevrouw " + lastname2 + "," + Environment.NewLine + "beste " + name2 + ", over " + (65 - age2) + " jaar" + " kunt u de 65+ pas aanvragen." + Environment.NewLine);
 }
 
-//static void Opdracht2()
-//{
+static void Opdracht2()
+{
     string path = @"C:\wamp64\www\school\windesheim\periode 3-4\software development1\project1_Gianni_van_Looij\opdracht2.txt";
     string text = File.ReadAllText(path);
     // this checks if there is text, wich means that it exists. i tried methods like:
@@ -30,20 +30,25 @@ static void Opdracht1()
    
     if (File.Exists(path))
     {
-        Console.WriteLine("File not found.");
-        return;
+    if (path.EndsWith(".txt"))
+    {
+        Console.WriteLine(text);
     }
+} else
+{
+    Console.WriteLine("File not found.");
+}
 
     // stuck on the second part of the assignment
-//}
+}
 
 
 
-//static void Main(string[] args)
-//{
-//    Opdracht1();
-//    Opdracht2();
-//}
+static void Main(string[] args)
+{
+    Opdracht1();
+    Opdracht2();
+}
 
 
 
