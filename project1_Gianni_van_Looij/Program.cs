@@ -1,6 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System;
 
-static void Opdracht1()
+class Program
+{
+    static void Opdracht1()
 {
     Console.WriteLine("challenge 1: ");
     Console.WriteLine("first enter name.");
@@ -34,20 +37,19 @@ static void Opdracht2()
     {
         Console.WriteLine(text);
     }
-} else
-{
+    } else
+    {
     Console.WriteLine("File not found.");
+    }
 }
 
-    // stuck on the second part of the assignment
-}
 
 
-
-static void Main(string[] args)
-{
-    Opdracht1();
-    Opdracht2();
+    static void Main(string[] args)
+    {
+        Opdracht1();
+        Opdracht2();
+    }
 }
 
 
