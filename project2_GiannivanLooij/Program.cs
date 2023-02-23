@@ -3,13 +3,13 @@ using System.Drawing;
 
 Console.WriteLine("Hello, World!");
 
-enum bell
+public enum bell
 {
     cyclebell,
     airhorn
 }
 
-enum color
+public enum color
 {
     black,
     yellow,
@@ -23,21 +23,36 @@ enum color
 
 public class bike
 {
-    string color;
+    color color;
     int frameheight;
-    string bell;
+    bell bell;
    
 
-    public bike(string color, int frameheight, string bell)
+    public bike(color color, int frameheight, bell bell)
     {
         this.color = color;
         this.frameheight = frameheight;
         this.bell = bell;
     }
 
-    static void Main()
+
+    //afdrukken?
+
+    readonly List<bike> bikes = new List<bike>
     {
-        blackbike = new bike(color.black, 12, bell.cyclebell);
+    readonly bike blackbike = new(color.black, 10, bell.airhorn);
+    readonly bike yellowbike = new(color.yellow, 8, bell.cyclebell);
+    readonly bike bluebike = new(color.blue, 9, bell.airhorn);
+    };
+
+    // You can convert it back to an array if you would like to
+    //bike[] bikes = bikes.ToArray();
+
+
+
+static void Main()
+    {
+        
     }
 
 
