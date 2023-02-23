@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.IO;
 
 class Program
 {
@@ -43,12 +44,30 @@ static void Opdracht2()
     }
 }
 
+    static void Opdracht3()
+    {
+        string path = @"C:\wamp64\www\school\windesheim\periode 3-4\software development1\project1_Gianni_van_Looij\ws1.csv";
+        //string text = File.ReadAllText(path);
+
+
+        string[] lines = System.IO.File.ReadAllLines(path);
+        foreach (string line in lines)
+        {
+            string[] columns = line.Split();
+            foreach (string column in columns)
+            {
+                Console.WriteLine(column);
+            }
+        }
+    }
+
 
 
     static void Main(string[] args)
     {
-        Opdracht1();
-        Opdracht2();
+        //Opdracht1();
+        //Opdracht2();
+          Opdracht3();
     }
 }
 
